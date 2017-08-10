@@ -24,6 +24,15 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release" CACHE STRING "Choose the type of build, options are: Release Debug" FORCE)
 endif()
 
+#include rust and c++11 benchmarks by default
+if(NOT INCLUDE_CPP11)
+    set(INCLUDE_CPP11 1)
+endif()
+
+if(NOT INCLUDE_RUST)
+    set(INCLUDE_RUST 1)
+endif()
+
 set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Release" "Debug")
 
 if(NOT CMAKE_BUILD_TYPE MATCHES "^(Release|Debug)$")
