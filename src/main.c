@@ -35,6 +35,9 @@ static struct engines engines [] = {
 #ifdef INCLUDE_RUST
     {.name = "rust_regex",  .find_all = rust_find_all},
 #endif
+#ifdef INCLUDE_CPP11
+    {.name = "cpp11",       .find_all = cpp11_find_all},
+#endif
 };
 
 static char * regex [] = {

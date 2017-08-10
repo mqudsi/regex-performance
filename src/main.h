@@ -30,6 +30,9 @@ int pcre2_jit_find_all(char* pattern, char* subject, int subject_len, int repeat
 #ifdef INCLUDE_RE2
 int re2_find_all(char* pattern, char* subject, int subject_len, int repeat, struct result * res);
 #endif
+#ifdef INCLUDE_CPP11
+int cpp11_find_all(char* pattern, char* subject, int subject_len, int repeat, struct result * res);
+#endif
 #ifdef INCLUDE_TRE
 int tre_find_all(char* pattern, char* subject, int subject_len, int repeat, struct result * res);
 #endif

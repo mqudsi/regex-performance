@@ -36,6 +36,12 @@ if(NOT ${INCLUDE_RE2} MATCHES "disabled")
     set(REGEX_ENGINES ${REGEX_ENGINES} re2)
 endif()
 
+# if(NOT ${INCLUDE_CPP11} MATCHES "disabled")
+    add_definitions(-DINCLUDE_CPP11)
+    set(REGEX_SOURCES ${REGEX_SOURCES} cpp11.cpp)
+    # set(REGEX_ENGINES ${REGEX_ENGINES} cpp11)
+# endif()
+
 if(NOT ${INCLUDE_RUST} MATCHES "disabled")
     add_subdirectory(rust)
     set(REGEX_SOURCES ${REGEX_SOURCES} rust.c)
