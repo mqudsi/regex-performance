@@ -39,7 +39,9 @@ int onig_find_all(char* pattern, char* subject, int subject_len, int repeat, str
 #ifdef INCLUDE_HYPERSCAN
 int hs_find_all(char * pattern, char * subject, int subject_len, int repeat, struct result * res);
 #endif
+#ifdef INCLUDE_RUST
 int rust_find_all(char * pattern, char * subject, int subject_len, int repeat, struct result * res);
+#endif
 
 #ifdef __cplusplus
 }

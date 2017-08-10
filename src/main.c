@@ -32,7 +32,9 @@ static struct engines engines [] = {
 #ifdef INCLUDE_HYPERSCAN
     {.name = "hscan",       .find_all = hs_find_all},
 #endif
+#ifdef INCLUDE_RUST
     {.name = "rust_regex",  .find_all = rust_find_all},
+#endif
 };
 
 static char * regex [] = {
